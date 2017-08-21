@@ -2,7 +2,7 @@
 
 pkgname=consolekit-s6serv
 pkgver=0.1
-pkgrel=2
+pkgrel=3
 pkgdesc="consolekit service for s6"
 arch=(x86_64)
 license=('beerware')
@@ -24,7 +24,7 @@ package() {
 
 	# log
 	install -Dm 0755 "$srcdir/consolekit.log.run.s6" "$pkgdir/etc/s6-serv/available/classic/consolekit/log/run"
-	install -Dm 0644 "$srcdir/consolekit.logd" "$pkgdir/etc/s6-serv/log.d/serv/consolekit"
+	install -Dm 0644 "$srcdir/consolekit.logd" "$pkgdir/etc/s6-serv/log.d/consolekit"
 	
 	install -Dm 0755 "$srcdir/LICENSE" "$pkgdir/usr/share/licenses/consolekit-s6serv/LICENSE"
 }
